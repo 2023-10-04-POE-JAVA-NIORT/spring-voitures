@@ -1,5 +1,6 @@
 package com.example.demo.dao;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -17,6 +18,8 @@ public class Voiture {
     private Integer annee;
     private String couleur;
     private LocalDate dateImmatriculation;
+
+    @JsonIgnore
     private String numeroImmatriculation;
 
     public Integer getId() {
