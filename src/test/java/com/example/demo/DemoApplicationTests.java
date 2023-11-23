@@ -38,5 +38,4 @@ class DemoApplicationTests {
 		for(Voiture v : voitures)
 			System.out.println(v);
 	}
-
 }

@@ -22,6 +22,10 @@ public class Voiture {
     @JsonIgnore
     private String numeroImmatriculation;
 
+    @ManyToOne
+    private Proprietaire proprietaire;
+
+
     public Integer getId() {
         return id;
     }
