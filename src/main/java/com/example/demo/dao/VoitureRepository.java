@@ -9,5 +9,6 @@ import java.util.List;
 public interface VoitureRepository extends JpaRepository<Voiture, Integer> {
 
     public List<Voiture> findAllByMarque(String marque);
+    public List<Voiture> findAllByMarqueAndCouleur(String marque, String couleur);
 
 }

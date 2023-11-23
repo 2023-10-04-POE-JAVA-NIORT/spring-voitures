@@ -15,9 +15,18 @@ class DemoApplicationTests {
 	VoitureRepository voitureRepository;
 
 	@Test
-	void voiture() {
+	void testFindAllByMarque() {
 
 		List<Voiture> voitures =  voitureRepository.findAllByMarque("Mercedes");
+		for(Voiture v : voitures)
+			System.out.println(v);
+	}
+
+	@Test
+	void testFindAllByMarqueAndCouleur() {
+
+		List<Voiture> voitures =  voitureRepository
+				.findAllByMarqueAndCouleur("Mercedes", "bleu");
 		for(Voiture v : voitures)
 			System.out.println(v);
 	}
