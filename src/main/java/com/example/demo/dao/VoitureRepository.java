@@ -12,6 +12,8 @@ public interface VoitureRepository extends JpaRepository<Voiture, Integer> {
     // Doc avec les mots clés:
     // https://docs.spring.io/spring-data/data-commons/docs/current/reference/html/#appendix.query.method.subject
     public List<Voiture> findAllByMarque(String marque);
+
+    // SELECT * FROM voitures v WHERE v.marque=? AND v.couleur=?
     public List<Voiture> findAllByMarqueAndCouleur(String marque, String couleur);
 
 
