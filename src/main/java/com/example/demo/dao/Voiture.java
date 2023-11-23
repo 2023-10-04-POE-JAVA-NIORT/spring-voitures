@@ -82,6 +82,14 @@ public class Voiture {
         this.numeroImmatriculation = numeroImmatriculation;
     }
 
+    public Proprietaire getProprietaire() {
+        return proprietaire;
+    }
+
+    public void setProprietaire(Proprietaire proprietaire) {
+        this.proprietaire = proprietaire;
+    }
+
     @Override
     public String toString() {
         return "Voiture{" +
