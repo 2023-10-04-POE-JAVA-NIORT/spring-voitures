@@ -19,7 +19,7 @@ public class Voiture {
     private String couleur;
     private LocalDate dateImmatriculation;
 
-    @JsonIgnore
+    //@JsonIgnore
     private String numeroImmatriculation;
 
     @ManyToOne
@@ -100,6 +100,7 @@ public class Voiture {
                 ", couleur='" + couleur + '\'' +
                 ", dateImmatriculation=" + dateImmatriculation +
                 ", numeroImmatriculation='" + numeroImmatriculation + '\'' +
+                ", proprietaire=" + proprietaire +
                 '}';
     }
 }

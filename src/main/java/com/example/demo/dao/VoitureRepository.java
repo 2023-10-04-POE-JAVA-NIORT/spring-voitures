@@ -9,10 +9,13 @@ import java.util.List;
 @Repository
 public interface VoitureRepository extends JpaRepository<Voiture, Integer> {
 
+    // Doc avec les mots clés:
+    // https://docs.spring.io/spring-data/data-commons/docs/current/reference/html/#appendix.query.method.subject
     public List<Voiture> findAllByMarque(String marque);
     public List<Voiture> findAllByMarqueAndCouleur(String marque, String couleur);
 
 
+    // Alternative vous permettant d'écrire du vrai SQL
     @Query(value = "SELECT * FROM voitures WHERE couleur='bleu'", nativeQuery = true)
     public List<Voiture> retourneVoituresBleu();
 }

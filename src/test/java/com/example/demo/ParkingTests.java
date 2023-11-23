@@ -49,5 +49,18 @@ class ParkingTests {
 
 	}
 
+	@Test
+	void lireParking(){
+		Optional<Parking> optional =  parkingRepository.findById(4);
+		if(optional.isPresent()){
+			Parking parking = optional.get();
+
+			System.out.println(parking);
+
+			System.out.println(parking.getVoitures().size());
+			for(Voiture v : parking.getVoitures())
+				System.out.println(v);
+		}
+	}
 
 }

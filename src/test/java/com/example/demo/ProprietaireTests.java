@@ -39,8 +39,17 @@ class ProprietaireTests {
 			v.setProprietaire(jcd);
 			voitureRepository.save(v);
 		}
-
 	}
 
+
+	@Test
+	void lireVoiture(){
+		Optional<Voiture> optional = voitureRepository.findById(8);
+		if(optional.isPresent()){
+			Voiture voiture = optional.get();
+			System.out.println(voiture);
+		} else
+			System.out.println("id non trouvé");
+	}
 
 }

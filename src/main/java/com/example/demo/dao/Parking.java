@@ -16,7 +16,7 @@ public class Parking {
     private String rue;
     private int numero;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Voiture> voitures = new ArrayList<>();
 
     public Integer getId() {
