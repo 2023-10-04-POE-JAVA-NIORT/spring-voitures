@@ -77,4 +77,17 @@ public class Voiture {
     public void setNumeroImmatriculation(String numeroImmatriculation) {
         this.numeroImmatriculation = numeroImmatriculation;
     }
+
+    @Override
+    public String toString() {
+        return "Voiture{" +
+                "id=" + id +
+                ", marque='" + marque + '\'' +
+                ", modele='" + modele + '\'' +
+                ", annee=" + annee +
+                ", couleur='" + couleur + '\'' +
+                ", dateImmatriculation=" + dateImmatriculation +
+                ", numeroImmatriculation='" + numeroImmatriculation + '\'' +
+                '}';
+    }
 }
