@@ -31,4 +31,12 @@ class DemoApplicationTests {
 			System.out.println(v);
 	}
 
+	@Test
+	void testQueryVoituresBleus(){
+		List<Voiture> voitures =  voitureRepository
+				.retourneVoituresBleu();
+		for(Voiture v : voitures)
+			System.out.println(v);
+	}
+
 }
